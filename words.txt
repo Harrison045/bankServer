@@ -1,0 +1,18 @@
+// A persona todeo:
+
+/**
+ * 1. create a bank
+ * 2. update a bank detail
+ * 3. delete a bank
+ * 4. access a list of banks
+ * 5. banck account number
+ */
+
+//Bank details
+/**
+ * 1. name
+ * 2. branch
+ * 3. location
+ * 4. address
+ * 5. phone
+ */
