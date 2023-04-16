@@ -2,6 +2,7 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
 const {
   listBanksController,
   updateBanksController,
@@ -26,6 +27,10 @@ server.put("/bank", updateBanksController);
 //delete bank - delete method
 server.delete("/bank", deleteBanksController);
 
-//start server
+//connecting DataBase start server
 
-server.listen(3000, () => console.log("server has started"));
+mongoose.connect("mongodb+srv://codetrain:aDBxwiMcVVCy9e54@cluster0.wadnheh.mongodb.net/?retryWrites=true&w=majority").then(result=>{
+  server.listen(3000, () => console.log("server has started"));
+}).catch(err => console.log(err))
+
+
