@@ -1,11 +1,12 @@
 const BankModel = require("./model");
 //controllers
 
-// const listBanksController = (req, res) => {
-//   // list of bank
-//   const banks = BankModel.all();
-//   res.json({ data: banks });
-// };
+const listBanksController = (req, res) => {
+  // list of bank
+  BankModel.find().then(bank=>{
+    res.json({data:bank})
+  }).catch(err => console.log(err))
+};
 
 const createBanksController = (req, res) => {
   //create a bank
@@ -18,10 +19,9 @@ const createBanksController = (req, res) => {
     address,
     accountNumber,
   });
-  bank.save().then(results=>{
-    res.json({ message: "bank created", data: results });
+  bank.save().then((result) => {
+    res.json({ message: "bank created", data: result });
   }).catch(error => console.log(error))
-  
 };
 
 // const updateBanksController = (req, res) => {
@@ -63,8 +63,8 @@ const createBanksController = (req, res) => {
 // };
 
 module.exports = {
-  // listBanksController,
+  listBanksController,
   // updateBanksController,
   createBanksController,
-  //  
+  //
 };

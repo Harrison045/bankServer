@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose"); 
 const {
-  // listBanksController,
+  listBanksController,
   // updateBanksController,
   createBanksController,
   // deleteBanksController,
@@ -19,7 +19,7 @@ server.use(bodyParser.json());
 //routes
 
 //view banks - get method
-// server.get("/bank", listBanksController);
+server.get("/bank", listBanksController);
 //create bank - post method
 server.post("/bank", createBanksController);
 // update bant - put method

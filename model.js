@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
 const BankSchema = mongoose.Schema({
   name: String,
@@ -6,8 +6,8 @@ const BankSchema = mongoose.Schema({
   branch: String,
   address: String,
   accountNumber: String,
-});
+})
 
-const BankModel = mongoose.model("Bank", BankSchema);
+const BankModel = mongoose.model("Bank", BankSchema)
 
-module.exports = BankModel;
+module.exports = BankModel
