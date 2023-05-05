@@ -7,7 +7,8 @@ const {
   listBanksController,
   updateBanksController,
   createBanksController,
-  // deleteBanksController,
+  deleteBanksController,
+  createAccountController
 } = require("./controllers");
 
 //create express server
@@ -25,7 +26,9 @@ server.post("/bank", createBanksController);
 // update bant - put method
 server.put("/bank", updateBanksController);
 // //delete bank - delete method
-// server.delete("/bank", deleteBanksController);
+server.delete("/bank", deleteBanksController);
+
+server.post("/account", createAccountController)
 
 //connecting DataBase start server
 
